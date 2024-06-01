@@ -27,3 +27,18 @@ export default {
         </div>
     </div>
 </template>
+
+<style>
+header {
+    background-color: orange;
+    width: 100%;
+    position: fixed;
+    height: 40px;
+    z-index: 1;
+
+    .container {
+        margin-top: 9px;
+        color: white;
+    }
+}
+</style>

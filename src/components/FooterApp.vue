@@ -14,3 +14,10 @@ export default {
         ciao
     </div>
 </template>
+
+<style>
+footer {
+    background-color: rgb(40, 40, 40);
+    height: 70px;
+}
+</style>

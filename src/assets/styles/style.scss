@@ -1,7 +1,7 @@
-@import './partials/common';
-@import './partials/reset';
-@import './partials/variables';
-@import './partials/utilities';
+@use './partials/common' as *;
+@use './partials/reset' as *;
+@use './partials/variables' as *;
+@use './partials/utilities' as *;
 
 
 /*LAYOUT*/
@@ -11,27 +11,8 @@
     margin: 0 auto;
 }
 
-header {
-    background-color: orange;
-    width: 100%;
-    position: fixed;
-    height: 40px;
-    z-index: 1;
-}
-
-header .container {
-    margin-top: 9px;
-    color: white;
-}
-
-
 main .container {
     padding-top: 55px;
-}
-
-footer {
-    background-color: rgb(40, 40, 40);
-    height: 70px;
 }
 
 .row {
@@ -41,15 +22,28 @@ footer {
 
 .col-33 {
     width: calc(100%/3);
+
+    .labels {
+        position: absolute;
+        bottom: 80px;
+    }
+
+    &:hover .hover-image {
+        display: block;
+    }
+
+    &:hover .main-image {
+        display: none;
+    }
 }
 
 .content {
     margin: 10px;
-}
 
-.content .main-image {
-    width: 100%;
-    display: block;
+    .main-image {
+        width: 100%;
+        display: block;
+    }
 }
 
 /*FINE LAYOUT*/
@@ -57,56 +51,6 @@ footer {
 .hover-image {
     width: 100%;
     display: none;
-}
-
-.col-33:hover .hover-image {
-    display: block;
-}
-
-.col-33:hover .main-image {
-    display: none;
-}
-
-.labels {
-    position: absolute;
-    bottom: 80px;
-}
-
-.label {
-
-    font-size: 0.85em;
-    color: white;
-    font-weight: bold;
-    padding: 3px 8px;
-}
-
-.red-label {
-    background-color: red;
-}
-
-.green-label {
-    background-color: green;
-}
-
-.brand {
-    font-size: 0.75em;
-}
-
-.clothes-name {
-    font-weight: bold;
-}
-
-.prices {
-    font-size: 0.80em;
-}
-
-.discount-price {
-    color: red;
-    font-weight: bold;
-}
-
-.original-price {
-    text-decoration: line-through;
 }
 
 .logo {

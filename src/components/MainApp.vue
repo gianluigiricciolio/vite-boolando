@@ -28,7 +28,6 @@ export default {
 
                 </div>
             </div>
-
             <div class="col-33">
                 <div class="content p-relative">
                     <img class="main-image" src="../assets/img/2.webp" alt="">
@@ -48,7 +47,6 @@ export default {
 
                 </div>
             </div>
-
             <div class="col-33">
                 <div class="content p-relative">
                     <img class="main-image" src="../assets/img/3.webp" alt="">
@@ -68,7 +66,6 @@ export default {
 
                 </div>
             </div>
-
             <div class="col-33">
                 <div class="content p-relative">
                     <img class="main-image" src="../assets/img/4.webp" alt="">
@@ -89,7 +86,6 @@ export default {
 
                 </div>
             </div>
-
             <div class="col-33">
                 <div class="content p-relative">
                     <img class="main-image" src="../assets/img/5.webp" alt="">
@@ -107,7 +103,6 @@ export default {
 
                 </div>
             </div>
-
             <div class="col-33">
                 <div class="content p-relative">
                     <img class="main-image" src="../assets/img/6.webp" alt="">
@@ -130,4 +125,41 @@ export default {
     </div>
 </template>
 
-<style></style>
+<style>
+.label {
+
+    font-size: 0.85em;
+    color: white;
+    font-weight: bold;
+    padding: 3px 8px;
+}
+
+.red-label {
+    background-color: red;
+}
+
+.green-label {
+    background-color: green;
+}
+
+.brand {
+    font-size: 0.75em;
+}
+
+.clothes-name {
+    font-weight: bold;
+}
+
+.prices {
+    font-size: 0.80em;
+}
+
+.discount-price {
+    color: red;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+</style>
