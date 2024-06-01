@@ -17,7 +17,7 @@ export default {
             </div>
 
             <div class="col d-flex align-center">
-                <img class="logo" src="./assets/img/boolean-logo.png" alt="">
+                <img class="logo" src="../assets/img/boolean-logo.png" alt="">
             </div>
             <div class="col utente">
                 <img src="" alt="profilo">
