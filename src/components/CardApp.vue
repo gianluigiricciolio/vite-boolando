@@ -2,34 +2,50 @@
 export default {
     name: 'CardApp',
 
-    props: ['name', 'brand', 'frontImage', 'backImage'],
+    props: ['product', 'brand', 'frontImage', 'backImage'],
 
     data() {
         return {
+        }
+    },
 
+    methods: {
+
+        findBadgeByType(type) {
+            return this.product.badges.find(
+                badge => badge.type === type
+            )
+        },
+
+        discountedPrice(product) {
+            let oldPrice = product.price;
+            let discount = parseInt(this.findBadgeByType('discount').value.slice(1, 3));
+            const newPrice = oldPrice - oldPrice * discount / 100;
+
+            return newPrice.toFixed(2);
         }
     }
-
 }
 </script>
 
 <template>
     <div class="col-33">
         <div class="content p-relative">
-            <img class="main-image" :src="`../src/assets/img/${frontImage}`" alt="">
-            <img class="hover-image" :src="`../src/assets/img/${backImage}`">
+            <img class="main-image" :src="`../src/assets/img/${product.frontImage}`" alt="">
+            <img class="hover-image" :src="`../src/assets/img/${product.backImage}`">
 
             <div class="labels">
-                <span class="label red-label">-50%</span>
-                <span class="label green-label">Sostenibilità</span>
+                <span v-if="findBadgeByType('discount')" class="label red-label">{{
+                    findBadgeByType('discount').value }}</span>
+                <span v-if="findBadgeByType('tag')" class="label green-label">Sostenibilità</span>
             </div>
             <div class="description">
-                <div class="brand">{{ brand }}</div>
-                <div class="clothes-name">{{ name }}</div>
+                <div class="brand">{{ product.brand }}</div>
+                <div class="clothes-name">{{ product.name }}</div>
             </div>
             <div class="prices">
-                <span class="discount-price">14,99&euro;</span>
-                <span class="original-price">29,99&euro;</span>
+                <span v-if="findBadgeByType('discount')" class="discount-price">{{ discountedPrice(product) }}&euro;</span>
+                <span class="original-price">{{ product.price }}&euro;</span>
             </div>
 
         </div>

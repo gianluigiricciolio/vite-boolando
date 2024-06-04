@@ -4,6 +4,8 @@ import MainApp from './components/MainApp.vue';
 import FooterApp from './components/FooterApp.vue';
 
 export default {
+    name: 'MyApp',
+
     components: {
         HeaderApp,
         FooterApp,
