@@ -122,7 +122,8 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <CardApp v-for="product in products" :name="product.name" :brand="product.brand">
+            <CardApp v-for="product in products" :name="product.name" :brand="product.brand"
+                :frontImage="product.frontImage" :backImage="product.backImage">
             </CardApp>
         </div>
     </div>

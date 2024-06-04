@@ -2,6 +2,8 @@
 export default {
     name: 'CardApp',
 
+    props: ['name', 'brand', 'frontImage', 'backImage'],
+
     data() {
         return {
 
@@ -14,8 +16,8 @@ export default {
 <template>
     <div class="col-33">
         <div class="content p-relative">
-            <img class="main-image" src="../assets/img/1.webp" alt="">
-            <img class="hover-image" src="../assets/img/1b.webp" alt="">
+            <img class="main-image" :src="`../src/assets/img/${frontImage}`" alt="">
+            <img class="hover-image" :src="`../src/assets/img/${backImage}`">
 
             <div class="labels">
                 <span class="label red-label">-50%</span>
